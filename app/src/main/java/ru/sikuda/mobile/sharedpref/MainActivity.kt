@@ -8,7 +8,7 @@ import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun onClick(v: View) {
-        when (v.getId()) {
+    private fun onClick(v: View) {
+        when (v.id) {
             R.id.btnSave -> saveText()
             R.id.btnLoad -> loadText()
             else -> {
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        val KEY_TEXT_FOR_SAVE = "SAVED_TEXT"
+        const val KEY_TEXT_FOR_SAVE = "SAVED_TEXT"
     }
 }
 
